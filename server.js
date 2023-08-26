@@ -17,8 +17,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://dashboard-6sko.onrender.com/",
-      "https://majd-ha.github.io/",
+      "https://dashboard-6sko.onrender.com",
+      "https://majd-ha.github.io",
     ],
   })
 );
