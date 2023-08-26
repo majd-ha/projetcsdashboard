@@ -14,9 +14,6 @@ const Project = require("./models/ProjectModel");
 const cors = require("cors");
 const requireAuth = require("./requirAuth");
 const app = express();
-
-app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: [
@@ -25,6 +22,9 @@ app.use(
     ],
   })
 );
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(express.static("public"));
 app.post("/login", loginUser);
 
